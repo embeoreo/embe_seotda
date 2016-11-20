@@ -1,0 +1,7 @@
+#include "Test.h"
+
+
+void Test()
+{
+	printf("hello");
+}
