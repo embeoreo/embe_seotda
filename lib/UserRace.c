@@ -1,0 +1,55 @@
+#include "test.h"
+#include "global.h"
+
+int UserRace()
+{
+	
+	int userchoice = 0;
+	if (usermoney > 0) // user have money
+	{
+		printf("now money\n%s : %d\ncom : %d\nbasic betting money = %d\n", username, usermoney, commoney,call_betting_money);
+		usermoney = usermoney - call_betting_money;
+		commoney = commoney - call_betting_money;
+		total_betting_money = call_betting_money * 2;
+		printf("1.다이  2.콜  3.하프\n");
+		scanf("%d", &userchoice);
+		if (userchoice == 1)//die
+		{
+			commoney = commoney + total_betting_money;
+			
+			return 1; // return 1 is lose
+		}
+		else
+		{
+			if (userchoice == 2)//call
+			{
+
+				printf("now betting money is %dwon\n ", call_betting_money);
+				total_betting_money = total_betting_money + call_betting_money;
+				usermoney = usermoney - call_betting_money;
+				return 2;
+			}
+			else if (userchoice == 3)//half
+			{
+				call_betting_money = total_betting_money / 2;
+				total_betting_money = total_betting_money + (total_betting_money / 2);
+				
+				usermoney = usermoney - call_betting_money;
+				return 3;
+			}
+			if (usermoney <= 0) //Bankruptcy
+			{
+				usermoney = 0;
+				return -999; // -999 =  Bankruptcy 리턴하면 CompareCard를 실행해야한다.
+			}
+				
+		}
+			
+		
+	}
+	else if (usermoney = 0)
+	{
+		return 1; // 1을 리턴하면 CompareCard를 실행해야한다.
+	}
+	return 0;
+}

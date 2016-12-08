@@ -1,0 +1,10 @@
+#include "Global_seoda.h"
+#include "Header_seoda.h"
+
+void GetProfile()
+{
+	printf("Enter your name\n");
+	scanf("%s", &username);//username 
+	fflush(stdin);
+}
+

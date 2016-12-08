@@ -1,0 +1,25 @@
+#include "Global_seoda.h"
+
+void ShuffleArray()
+{
+	int Array[20] = { 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10 };
+	int i, n;
+	int nTmp;
+	int nMax = 20;
+
+	srand(time(NULL));
+
+	for (i = nMax - 1; i >= 0; i--)
+	{
+		n = rand() % nMax;
+		nTmp = Array[i];
+		Array[i] = Array[n];
+		Array[n] = nTmp;
+	}
+	uc1 = Array[0];
+	uc2 = Array[2];
+	cc1 = Array[1];
+	cc2 = Array[3];
+
+
+}

@@ -1,0 +1,16 @@
+#include "Global_seoda.h"
+#include "Header_seoda.h"
+
+
+int main()
+{
+	GetProfile();//사용자 정보 입력받기 함수
+       // int result = start();
+	ShuffleArray();//패 셔플한 값을 4자리 수로 전환
+
+	
+
+	printf("%d %d %d %d\n", usercard1, usercard2, comcard1, comcard2);
+
+	return 0;
+}

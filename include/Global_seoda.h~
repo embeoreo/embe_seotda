@@ -1,0 +1,20 @@
+
+
+int usercard1;//usercard
+int usercard2;
+int checkCardFlagUser;//compare result
+int comcard1;//comcard
+int comcard2;
+int checkCardFlagCom;//compare result
+int whoWinFlag;//1 == user win,0 == com win, 999 == draw
+
+int usermoney = 100000;//user money
+int commoney = 100000;//com money
+int total_betting_money;//total betting money
+int call_betting_money=1000;//call betting money
+
+int userState;
+int comState;
+
+char username[50];//userName
+char startFlag;//보류
